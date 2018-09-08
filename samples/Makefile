@@ -27,10 +27,10 @@ all:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\withdll"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
-    cd "$(MAKEDIR)\cping"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
-    cd "$(MAKEDIR)\disas"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+#    cd "$(MAKEDIR)\cping"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+#   cd "$(MAKEDIR)\disas"
+#   @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\dtest"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\dumpe"
@@ -62,8 +62,8 @@ all:
     cd "$(MAKEDIR)\region"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
 !IF "$(DETOURS_TARGET_PROCESSOR)" == "X64" || "$(DETOURS_TARGET_PROCESSOR)" == "IA64"
-    cd "$(MAKEDIR)\talloc"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+#    cd "$(MAKEDIR)\talloc"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
 !ENDIF
     cd "$(MAKEDIR)\traceapi"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
@@ -102,8 +102,8 @@ clean:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\cping"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
-    cd "$(MAKEDIR)\disas"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
+#    cd "$(MAKEDIR)\disas"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\dtest"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\dumpe"
@@ -166,8 +166,8 @@ realclean:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\cping"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
-    cd "$(MAKEDIR)\disas"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
+ #   cd "$(MAKEDIR)\disas"
+ #   @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\dtest"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\dumpe"
@@ -231,11 +231,11 @@ test:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
 !ENDIF
 !IF "$(DETOURS_TARGET_PROCESSOR)" == "X86"
-    cd "$(MAKEDIR)\cping"
+#    cd "$(MAKEDIR)\cping"
 #   @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
 !ENDIF
-    cd "$(MAKEDIR)\disas"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
+#    cd "$(MAKEDIR)\disas"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
 !IF "$(DETOURS_TARGET_PROCESSOR)" != "ARM64"
     cd "$(MAKEDIR)\dtest"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) test

@@ -1,0 +1,16 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.obj
+*.a
+*.VC.db
+*.VC.opendb
+*.pdb
+*.vcxproj.user
+*.exe
+*.tlog
+*.lib
+*.dll
+
+# Folders
+bin
+obj
+.vs

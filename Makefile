@@ -15,9 +15,9 @@ all:
 	@if exist "$(MAKEDIR)\core\makefile" cd "$(MAKEDIR)\core" && $(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\src"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
-    cd "$(MAKEDIR)\samples"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
-	@if exist "$(MAKEDIR)\bugs\makefile" cd "$(MAKEDIR)\bugs" && $(MAKE) /NOLOGO /$(MAKEFLAGS)
+#    cd "$(MAKEDIR)\samples"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+#	@if exist "$(MAKEDIR)\bugs\makefile" cd "$(MAKEDIR)\bugs" && $(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)"
 
 clean:
